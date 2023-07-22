@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+<p>This page is cached with <code>fresh_when last_modified: @posts.maximum(:updated_at), etag: @posts.map(&:id)</code></p>
+<ul>
+  <% @posts.each do |post| %>
+  <li><%= post.id %></li>
+  <% end %>
+</ul>
+
+<%= link_to "new post", new_post_path %>
